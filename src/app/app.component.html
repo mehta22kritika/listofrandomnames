@@ -1,0 +1,20 @@
+<div>
+    <p class="text-align">
+      List of Names:
+      <input class="right-align" type="text" placeholder="Search Name..." [(ngModel)]="searchName" />
+    </p>
+</div>
+<table>
+  <thead>
+    <tr>
+      <th scope="col">S.No.</th>
+      <th scope="col">Names</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let randomname of userNames | filter: searchName; let i = index">
+      <td data-label="S. No.">{{i + 1}}</td>
+      <td data-label="Name">{{randomname}}</td>
+    </tr>
+  </tbody>
+</table>
